@@ -39,7 +39,7 @@ public class Terning {
     }
 
     //  constructor.
-    public Terning() {
+    public  Terning() {
         this.aktiv = true;
         this.sideantal=6;
     }

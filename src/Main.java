@@ -5,19 +5,25 @@ public class Main {
 
     public static void main(String[] args) {
 
-
-        int sideantal = 6;
-
-        Terning [] ternings;
-        int [] histogram = new int[sideantal-1];
-
-
-
-        do{
+        Terning [] ternings = null;
+        ternings = fyldbæger();
+        rystBæger(ternings);
+        løftbæger(ternings);
 
 
 
-        } while (getString("tryk j for at forsætte").equalsIgnoreCase("j"))
+
+
+//
+//        do{
+//            rystBæger(ternings);
+//            løftbæger(ternings);
+//            statestik(ternings);
+//            fjernTerninger(ternings, getInt("hvilke terninger vil du fjerne"));
+//
+//
+//
+//        } while (getString("tryk j for at forsætte").equalsIgnoreCase("j"));
 
 
 
@@ -32,7 +38,7 @@ public class Main {
 
     public static void statestik(Terning[] ternings) {
 
-        int[] statestik = new int[ternings[1].getSideantal() + 1];
+        int[] statestik = new int[ternings[0].getSideantal() + 1];
 
         for (Terning t : ternings
         ) {
@@ -80,14 +86,18 @@ public class Main {
 
     }
 
-    public static Terning[] fyldbæger() {
+    public static Terning[] fyldbæger( ) {
 
+//        Terning[] ternings = new Terning[10];
         Terning[] ternings = new Terning[getInt("hvor mange terninger ønsker du at spille med ?")];
+
+
 
         for (int i = 0; i < ternings.length; i++) {
             ternings[i] = new Terning();
         }
 
+        System.out.println("fra fyldbøger " + ternings.length);
         return ternings;
     }
 
@@ -101,7 +111,7 @@ public class Main {
 
     public static int getInt(String s) {
 
-        int res;
+        int res=0;
 
         boolean ok = true;
 
@@ -110,16 +120,12 @@ public class Main {
         ok = false;
 
             try {
-                Integer.valueOf(getString(s));
+               res = Integer.valueOf(getString(s));
             } catch (NumberFormatException e) {
                ok = true;
             }
-
         }
-
-
-
-        return 0;
+        return res;
     }
 
 }
