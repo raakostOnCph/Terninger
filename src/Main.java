@@ -4,46 +4,23 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
 
 
- //       Terning[] terninger = fyldbæger();
-//        System.out.println("antallet et terninger er" + terninger.length);
+        int sideantal = 6;
 
-        boolean gentag = true;
-//
-//        while (gentag) {
-//
-//            visMeny();
-//
-//            int svar = getInt("angiv dit valg ");
-//
-//            switch (svar) {
-//                case 1:
-//                    rystBæger(terninger);
-//                    break;
-//                case 2:
-//                    løftbæger(terninger);
-//                    break;
-//                case 3:
-//                    fjernTerninger(terninger, getInt("hvilke terininger vi du fjerne ?"));
-//                    break;
-//                case 4:
-//                    statestik(terninger);
-//                    break;
-//                default:
-//                    gentag = false;
-//                    break;
-//
-//            }
+        Terning [] ternings;
+        int [] histogram = new int[sideantal-1];
 
 
-//            if (getString("tryk for q for quit").equalsIgnoreCase("q")){
-//                break;
-//            }
+
+        do{
 
 
-        int tal = getInt("skriv et tal");
+
+        } while (getString("tryk j for at forsætte").equalsIgnoreCase("j"))
+
+
+
 
 
     }
@@ -51,16 +28,7 @@ public class Main {
 
 
 
-    private static void visMeny() {
-        System.out.println(" du har følgende valg :\n" +
-                "tryk 1 for ryst bæger\n" +
-                "tryk 2 for løft bæger\n" +
-                "tryk 3 for fjernterninger\n" +
-                "tryk 4 for stetestik\n" +
 
-                "tryk andet for at stoppe\n"
-        );
-    }
 
     public static void statestik(Terning[] ternings) {
 
