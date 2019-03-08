@@ -49,18 +49,7 @@ public class Main {
     }
 
 
-//        rystBæger(terninger);
-//        løftbæger(terninger);
-//        statestik(terninger);
-//        fjernTerninger(terninger, getInt("hvilke terninger vil du fjerne ?"));
-//        løftbæger(terninger);
 
-
-//        Terning terning = new Terning();
-//        terning.rul();
-//        terning.setAktiv(false);
-//        System.out.println(terning.tegnTerning());
-    // }
 
     private static void visMeny() {
         System.out.println(" du har følgende valg :\n" +
