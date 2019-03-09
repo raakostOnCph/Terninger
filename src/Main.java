@@ -102,7 +102,7 @@ public class Main {
         return scanner.nextLine();
     }
 
-    public static int getInt(String s) {
+    public static int getIntSguDaEnTossetMådeAtGøreDetPå(String s) {
 
         int res = 0;
 
@@ -121,18 +121,14 @@ public class Main {
         return res;
     }
 
-    public static int getIntSmart(String s){
+    public static int getInt(String s){
 
-        int res;
-        while (true) {
 
-            try {
-                res= Integer.parseInt(getString(s));
-                return res;
-            } catch (NumberFormatException e) {
-                System.out.println("huske det skal være et tal");
-            }
+        while (true) try {
+            return Integer.parseInt(getString(s));
 
+        } catch (NumberFormatException e) {
+            System.out.println("huske det skal være et tal");
         }
 
 
