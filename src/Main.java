@@ -6,7 +6,7 @@ public class Main {
 
 //        Terning[] ternings = fyldbæger();
 
-        System.out.println(getIntSmart("skriv et tal"));
+        System.out.println(getInt("skriv et tal"));
 
 //        do {
 //            rystBæger(ternings);
