@@ -6,7 +6,7 @@ public class Main {
 
 //        Terning[] ternings = fyldbæger();
 
-        System.out.println(getInt("skriv et tal"));
+//        System.out.println(getInt("skriv et tal"));
 
 //        do {
 //            rystBæger(ternings);
@@ -27,6 +27,28 @@ public class Main {
 //
 //
 //        } while (getString("tryk j for at forsætte").equalsIgnoreCase("j"));
+
+
+        System.out.println("velkommen til mit terningenspil");
+
+        Terning [] ternings = fyldbæger();
+
+        while (true) {
+
+            rystBæger(ternings);
+            løftbæger(ternings);
+            statestik(ternings);
+            fjernTerninger(ternings, getInt("hvilke terninger vi du ferne"));
+            if (getString("tryk q for at stoppe").equalsIgnoreCase("q")) {
+                break;
+            }
+
+
+        }
+
+
+
+
     }
 
 
@@ -89,8 +111,6 @@ public class Main {
         for (int i = 0; i < ternings.length; i++) {
             ternings[i] = new Terning();
         }
-
-        System.out.println("fra fyldbøger " + ternings.length);
         return ternings;
     }
 
